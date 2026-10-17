@@ -7,6 +7,7 @@ import WhyTrustUs from './components/WhyTrustUs';
 import Contact from './components/Contact';
 import WhatsAppButton from './components/WhatsAppButton';
 import Footer from './components/Footer';
+import RedSpotlight from './components/RedSpotlight';
 
 export default function App() {
   const scrollToContact = () => {
@@ -18,6 +19,8 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#EFE6DE] text-[#0A0A0A] font-sans relative selection:bg-[#9A0002] selection:text-[#EFE6DE]">
+      <RedSpotlight />
+
       {/* Sticky Top Navigation */}
       <Navbar />
 

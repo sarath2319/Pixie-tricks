@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { servicesData } from '../data/servicesData';
+import FilmTape from './FilmTape';
 import { 
   Search, Share2, Video, Palette, FileText, TrendingUp, Target, 
   ArrowUpRight, CheckCircle2, X, Layers, Cpu, Award
@@ -31,7 +32,8 @@ export default function Services({ onOpenContact }) {
 
   return (
     <section id="services" className="py-24 bg-[#EFE6DE] relative overflow-hidden border-b border-neutral-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <FilmTape className="left-[-20%] top-[-0.5rem] z-0 h-28 w-[140%] opacity-35" />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">

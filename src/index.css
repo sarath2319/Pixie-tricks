@@ -19,6 +19,42 @@
   }
 }
 
+.red-spotlight {
+  --x: 50vw;
+  --y: 50vh;
+  position: fixed;
+  top: var(--y);
+  left: var(--x);
+  z-index: 100;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  background: #ff1024;
+  box-shadow: 0 0 0 5px rgb(255 16 36 / 22%), 0 0 24px 8px rgb(255 16 36 / 75%);
+  transform: translate3d(-50%, -50%, 0) scale(0.7);
+  transition: opacity 120ms ease, transform 120ms ease;
+  will-change: top, left, transform;
+}
+
+.red-spotlight--visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0) scale(1);
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  html,
+  html *,
+  html *::before,
+  html *::after {
+    cursor: none !important;
+  }
+}
+
 /* Heading Smooth Hover Accent Transition */
 .heading-hover {
   cursor: default;

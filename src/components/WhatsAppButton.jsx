@@ -5,7 +5,7 @@ import { MessageCircle, X } from 'lucide-react';
 export default function WhatsAppButton() {
   const [openPopover, setOpenPopover] = useState(false);
 
-  const whatsappNumber = '18005556398'; // Agency WhatsApp number
+  const whatsappNumber = '918825860664';
   const defaultMessage = encodeURIComponent(
     'Hello PIXETRICKS! I would like to talk about creative content, marketing, and digital advertising for my business.'
   );
@@ -34,9 +34,9 @@ export default function WhatsAppButton() {
             <div className="flex items-center gap-3 mb-3">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200"
-                  alt="Strategy Lead"
-                  className="w-10 h-10 rounded-full object-cover border border-[#9A0002]"
+                  src="/pixietricks-mark.png"
+                  alt="Pixietricks logo"
+                  className="w-10 h-10 rounded-lg object-cover border border-[#9A0002]"
                 />
                 <span className="absolute bottom-0 right-0 w-3 h-3 bg-[#9A0002] rounded-full border-2 border-black"></span>
               </div>

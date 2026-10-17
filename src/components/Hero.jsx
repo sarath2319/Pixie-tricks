@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Sparkles } from 'lucide-react';
+import FilmTape from './FilmTape';
 
 export default function Hero({ onOpenContact }) {
   const headlineWords = ["WE DON'T JUST", "MARKET.", "WE MAKE AN", "IMPACT."];
@@ -24,11 +25,12 @@ export default function Hero({ onOpenContact }) {
 
   return (
     <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden bg-[#EFE6DE]">
-      {/* Background ambient lighting effects */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#9A0002]/15 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-      <div className="absolute top-20 right-10 w-[350px] h-[350px] bg-neutral-900/5 rounded-full blur-[90px] pointer-events-none -z-10"></div>
+    {/* Background ambient lighting effects */}
+    <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#9A0002]/15 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+    <div className="absolute top-20 right-10 w-[350px] h-[350px] bg-neutral-900/5 rounded-full blur-[90px] pointer-events-none -z-10"></div>
+    <FilmTape className="left-[-30%] top-[3.5rem] z-0 h-32 w-[160%] opacity-30" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
           
           {/* Top Pill Badge */}

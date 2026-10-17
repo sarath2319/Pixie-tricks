@@ -29,10 +29,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex min-h-10 items-center justify-center">
           {/* Logo */}
-          <a href="#" className="absolute left-0 top-1/2 flex -translate-y-1/2 items-center gap-2 group">
-            <div className="w-9 h-9 bg-[#0A0A0A] rounded-lg flex items-center justify-center transition-transform group-hover:scale-105 border border-[#EFE6DE]/20 shadow-md">
-              <span className="font-bold text-[#9A0002] text-xl font-heading">P</span>
-            </div>
+          <a href="#" className="absolute left-0 top-1/2 flex -translate-y-1/2 items-center gap-2">
+            <img
+              src="/pixietricks-mark.png"
+              alt="Pixietricks megaphone logo"
+              className="h-9 w-9 shrink-0 rounded-lg object-cover"
+            />
             <div className="flex flex-col">
               <span className="font-heading font-extrabold text-xl tracking-tight text-[#0A0A0A] flex items-center gap-1.5">
                 PIXIETRICKS

@@ -92,6 +92,17 @@ export default function Footer({ onOpenContact }) {
               <li><a href="#why-us" className="hover:text-[#EFE6DE] transition-colors">Why Choose Us</a></li>
               <li><a href="#contact" className="hover:text-[#EFE6DE] transition-colors">Contact Us</a></li>
             </ul>
+            <div className="mt-8 space-y-2">
+              <span className="block font-heading font-bold text-xs uppercase tracking-wider text-[#EFE6DE]">
+                Contact No
+              </span>
+              <a
+                href="tel:+918825860664"
+                className="inline-block text-xs font-semibold tracking-wide text-neutral-300 hover:text-[#EFE6DE] transition-colors"
+              >
+                +91 88258 60664
+              </a>
+            </div>
           </div>
 
           {/* Newsletter Subscription */}

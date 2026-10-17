@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Send, CheckCircle2, ShieldCheck, Mail, Phone, MapPin, X } from 'lucide-react';
+import { Send, ShieldCheck, Mail, Phone, MapPin } from 'lucide-react';
 import TornDivider from './TornDivider';
 
 export default function Contact() {
@@ -15,8 +14,6 @@ export default function Contact() {
   });
 
   const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
 
   const availableServices = [
     'SEO Optimization',
@@ -57,20 +54,29 @@ export default function Contact() {
     return errs;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
     setErrors({});
-    setIsSubmitting(true);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-    }, 1200);
+    const message = [
+      'Hello PIXETRICKS! I would like to discuss a project.',
+      '',
+      `Name: ${formData.name.trim()}`,
+      `Company: ${formData.company.trim()}`,
+      `Email: ${formData.email.trim()}`,
+      `Phone: ${formData.phone.trim() || 'Not provided'}`,
+      `Services: ${formData.selectedServices.join(', ')}`,
+      `Monthly budget: ${formData.budget}`,
+      `Project goals: ${formData.details.trim()}`,
+    ].join('\n');
+    const whatsappUrl = `https://wa.me/918825860664?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -282,20 +288,10 @@ export default function Contact() {
               {/* Submit Button */}
               <button
                 type="submit"
-                disabled={isSubmitting}
                 className="w-full py-4 bg-[#9A0002] text-[#EFE6DE] font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-[#760002] transition-colors flex items-center justify-center gap-2 shadow-xl shadow-[#9A0002]/20"
               >
-                {isSubmitting ? (
-                  <span className="flex items-center gap-2">
-                    <span className="w-4 h-4 rounded-full border-2 border-[#EFE6DE] border-t-transparent animate-spin"></span>
-                    Encrypting & Transmitting Proposal...
-                  </span>
-                ) : (
-                  <>
-                    <span>Prepare My Enquiry</span>
-                    <Send className="w-4 h-4" />
-                  </>
-                )}
+                <span>Prepare My Enquiry</span>
+                <Send className="w-4 h-4" />
               </button>
 
             </form>
@@ -304,59 +300,6 @@ export default function Contact() {
         </div>
 
       </div>
-
-      {/* Submission Success Modal */}
-      <AnimatePresence>
-        {submitted && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSubmitted(false)}
-              className="fixed inset-0 bg-black/80 backdrop-blur-md"
-            ></motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="relative bg-neutral-900 border border-neutral-800 text-[#EFE6DE] p-8 sm:p-10 rounded-3xl max-w-lg w-full text-center z-10 shadow-2xl"
-            >
-              <button
-                onClick={() => setSubmitted(false)}
-                className="absolute top-4 right-4 text-neutral-400 hover:text-[#EFE6DE]"
-              >
-                <X className="w-5 h-5" />
-              </button>
-
-              <div className="w-16 h-16 rounded-full bg-[#9A0002] text-[#EFE6DE] flex items-center justify-center mx-auto mb-6">
-                <CheckCircle2 className="w-8 h-8 stroke-[2.5]" />
-              </div>
-
-              <h3 className="font-heading font-extrabold text-2xl sm:text-3xl mb-3">
-                ENQUIRY RECEIVED!
-              </h3>
-              <p className="text-neutral-300 text-xs sm:text-sm leading-relaxed mb-6">
-                Thank you, <strong className="text-[#EFE6DE]">{formData.name}</strong>. We've received your enquiry for <strong>{formData.company}</strong>.
-              </p>
-
-              <div className="bg-neutral-950 p-4 rounded-2xl border border-neutral-800 text-left text-xs mb-6 space-y-1 text-neutral-400">
-                <div>• <strong className="text-[#EFE6DE]">Selected Services:</strong> {formData.selectedServices.join(', ')}</div>
-                <div>• <strong className="text-[#EFE6DE]">Monthly Budget:</strong> {formData.budget}</div>
-                <div>• <strong className="text-[#EFE6DE]">Contact Email:</strong> {formData.email}</div>
-              </div>
-
-              <button
-                onClick={() => setSubmitted(false)}
-                className="w-full py-3.5 bg-[#EFE6DE] text-[#0A0A0A] font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-neutral-200 transition-colors"
-              >
-                Return to Site
-              </button>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
 
     </section>
   );

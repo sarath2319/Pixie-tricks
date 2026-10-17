@@ -17,7 +17,7 @@ export default function TornDivider({ reverse = false }) {
           <feDisplacementMap in="SourceGraphic" in2="paperNoise" scale="3" xChannelSelector="R" yChannelSelector="G" />
         </filter>
       </defs>
-      <path d={`M0 0 H1440 V27 ${edge.slice(5)} L0 36 Z`} fill="#EFE6DE" />
+      <path d={`M0 36 ${edge.slice(5)} V0 H0 Z`} fill="#EFE6DE" />
       <path d={`${edge} V96 H0 Z`} fill="#0A0A0A" />
       <path d={edge} fill="none" stroke="#9E978F" strokeWidth="12" opacity="0.7" filter={`url(#${filterId})`} />
       <path d={edge} fill="none" stroke="#EFE6DE" strokeWidth="2" opacity="0.9" filter={`url(#${filterId})`} />
