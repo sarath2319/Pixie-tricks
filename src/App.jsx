@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import Strategy from './components/Strategy';
 import WhyTrustUs from './components/WhyTrustUs';
+import PersonalBranding from './components/PersonalBranding';
 import Contact from './components/Contact';
 import WhatsAppButton from './components/WhatsAppButton';
 import Footer from './components/Footer';
@@ -30,6 +31,7 @@ export default function App() {
         <Services onOpenContact={scrollToContact} />
         <Strategy />
         <WhyTrustUs onOpenContact={scrollToContact} />
+        <PersonalBranding onOpenContact={scrollToContact} />
         <Contact />
       </main>
 

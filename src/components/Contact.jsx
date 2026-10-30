@@ -21,6 +21,7 @@ export default function Contact() {
     'Video & Motion Graphics',
     'Graphic Design',
     'Content & Copywriting',
+    'Personal Branding',
     'Google Ads',
     'Meta Ads'
   ];
@@ -80,8 +81,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#0A0A0A] text-[#EFE6DE] relative overflow-hidden">
-      <TornDivider />
+    <section id="contact" className="py-24 bg-white text-[#0A0A0A] relative overflow-hidden">
+      <TornDivider upperFillColor="#0A0A0A" lowerFillColor="#FFFFFF" />
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-[#9A0002]/15 rounded-full blur-[160px] pointer-events-none"></div>
 
@@ -92,56 +93,56 @@ export default function Contact() {
           {/* Left Column: Direct Info & Value Proposition */}
           <div className="lg:col-span-5 space-y-8">
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE6DE]/10 border border-[#EFE6DE]/15 text-[11px] font-bold uppercase tracking-wider text-[#EFE6DE] mb-4">
-                <span className="w-2 h-2 rounded-full bg-[#EFE6DE] animate-ping"></span>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-100 border border-neutral-200 text-[11px] font-bold uppercase tracking-wider text-neutral-900 mb-4">
+                <span className="w-2 h-2 rounded-full bg-[#9A0002] animate-ping"></span>
                 Let's Get Started
               </div>
-              <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-[#EFE6DE] tracking-tight mb-6 transition-colors duration-400 hover:text-[#9A0002] cursor-pointer">
+              <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-[#0A0A0A] tracking-tight mb-6 transition-colors duration-400 hover:text-[#9A0002] cursor-pointer">
                 READY TO TAKE <br />
-                <span className="text-[#EFE6DE] transition-colors duration-400 hover:text-[#9A0002]">YOUR BRAND FORWARD?</span>
+                <span className="text-[#0A0A0A] transition-colors duration-400 hover:text-[#9A0002]">YOUR BRAND FORWARD?</span>
               </h2>
-              <p className="text-neutral-400 text-sm sm:text-base leading-relaxed">
+              <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">
                 Have an idea, a business or a marketing challenge? Let's talk about it. Tell us what you're looking for, and we'll explore how PIXETRICKS can help.
               </p>
             </div>
 
             {/* Direct Contact Details */}
-            <div className="space-y-4 pt-4 border-t border-neutral-800">
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800">
+            <div className="space-y-4 pt-4 border-t border-neutral-200">
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-neutral-50 border border-neutral-200">
                 <div className="w-10 h-10 rounded-xl bg-[#9A0002] text-[#EFE6DE] flex items-center justify-center font-bold">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-400 block">Easy Communication</span>
-                  <span className="text-sm font-bold text-[#EFE6DE]">Reach our team through the agreed channel.</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 block">Easy Communication</span>
+                  <span className="text-sm font-bold text-neutral-900">Reach our team through the agreed channel.</span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800">
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-neutral-50 border border-neutral-200">
                 <div className="w-10 h-10 rounded-xl bg-[#9A0002] text-[#EFE6DE] flex items-center justify-center font-bold">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-400 block">Clear Progress Reports</span>
-                  <span className="text-sm font-bold text-[#EFE6DE]">Know what's done, how campaigns perform and what's next.</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 block">Clear Progress Reports</span>
+                  <span className="text-sm font-bold text-neutral-900">Know what's done, how campaigns perform and what's next.</span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800">
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-neutral-50 border border-neutral-200">
                 <div className="w-10 h-10 rounded-xl bg-[#9A0002] text-[#EFE6DE] flex items-center justify-center font-bold">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-400 block">Your Feedback Matters</span>
-                  <span className="text-sm font-bold text-[#EFE6DE]">We'll make sure your campaigns represent your brand.</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 block">Your Feedback Matters</span>
+                  <span className="text-sm font-bold text-neutral-900">We'll make sure your campaigns represent your brand.</span>
                 </div>
               </div>
             </div>
 
             {/* SLA Trust Badge */}
-            <div className="p-4 rounded-2xl bg-neutral-900 border border-neutral-800 flex items-center gap-3">
-              <ShieldCheck className="w-5 h-5 text-[#EFE6DE]" />
-              <span className="text-xs text-neutral-300">
+            <div className="p-4 rounded-2xl bg-neutral-50 border border-neutral-200 flex items-center gap-3">
+              <ShieldCheck className="w-5 h-5 text-[#9A0002]" />
+              <span className="text-xs text-neutral-600">
                 Your feedback helps make sure the content and campaigns represent your brand.
               </span>
             </div>

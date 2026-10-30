@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowUpRight, Send } from 'lucide-react';
+import TornDivider from './TornDivider';
 
 export default function Footer({ onOpenContact }) {
   const [newsletterEmail, setNewsletterEmail] = useState('');
@@ -17,7 +18,8 @@ export default function Footer({ onOpenContact }) {
   };
 
   return (
-    <footer className="bg-[#0A0A0A] text-[#EFE6DE] pt-20 pb-12 border-t border-neutral-800">
+    <footer className="relative overflow-hidden bg-[#0A0A0A] text-[#EFE6DE] pt-20 pb-12">
+      <TornDivider upperFillColor="#FFFFFF" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top CTA Big Banner */}

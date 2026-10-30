@@ -18,6 +18,7 @@ export default function Navbar() {
     { name: 'Services', href: '#services' },
     { name: 'Strategy', href: '#strategy' },
     { name: 'Why Us', href: '#why-us' },
+    { name: 'Personal Branding', href: '#personal-branding' },
   ];
 
   return (
